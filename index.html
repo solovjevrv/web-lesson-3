@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страница авторизации</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container h-100 d-flex align-items-center">
+      <div class="row justify-content-center w-100">
+        <div class="col-6 text-center">
+          <h2>Добро пожаловать!</h2>
+          <p>Чтобы продолжить вам необходимо авторизоваться</p>
+          <p>
+            Введенные вами имя пользователя и пароль в первый раз будут
+            использованы в дальнейшем.
+          </p>
+          <button
+            type="button"
+            class="btn btn-primary text-center"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Авторизоваться
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Авторизуйтесь в системе
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-12">
+                <label for="firstName" class="form-label">Как вас зовут?</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Введите ваше имя"
+                  required
+                />
+                <div class="valid-feedback">Отлично!</div>
+                <div class="invalid-feedback">
+                  Обязательно укажите ваше имя!
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="userName" class="form-label"
+                  >Имя пользователя</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userName"
+                  placeholder="Придумайте имя пользователя"
+                  required
+                />
+                <div class="valid-feedback">Отлично!</div>
+                <div class="invalid-feedback">
+                  Обязательно укажите имя пользователя!
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="userPassword" class="form-label">Пароль</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="userPassword"
+                  placeholder="Придумайте пароль"
+                  required
+                />
+                <div class="valid-feedback">Отлично!</div>
+                <div class="invalid-feedback">Обязательно укажите пароль!</div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100 mt-3 mb-3" type="submit">
+                  Войти
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
